@@ -9,6 +9,8 @@
 		<security:intercept-url pattern="/sample/admin"
 			access="ROLE_ADMIN" />
 		<security:form-login login-page="/myLogin"  />
+		<security:logout logout-url="/myLogout" delete-cookies="JSESSIONID" logout-success-url="/myLogin" invalidate-session="true"/>
+		
 
 	</security:http>
 	
